@@ -1,0 +1,38 @@
+void loop() {
+ 
+Serial.println("ALL GOOD");
+
+   Serial.println("I GOT RED");
+    Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());  //Initialize Packet send
+    Udp.print("You are Asking for Red"); //Send string back to client 
+    Udp.endPacket(); //Packet has been sent
+    packetSize = Udp.parsePacket(); //Read theh packetSize
+
+  
+  if(packetSize>0){ //Check to see if a request is present
+  
+  	Udp.read(packetBuffer, UDP_TX_PACKET_MAX_SIZE); //Reading the data request on the Udp
+ 	 String datReq(packetBuffer); //Convert packetBuffer array to string datReq
+  
+  if (datReq =="Red") { //See if Red was requested
+    Serial.println("I GOT RED");
+    Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());  //Initialize Packet send
+    Udp.print("You are Asking for Red"); //Send string back to client 
+    Udp.endPacket(); //Packet has been sent
+  }
+   if (datReq =="Green") { //See if Green was requested
+    Serial.println("I GOT GREEN");
+    Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());  //Initialize Packet send
+    Udp.print("You are Asking for Green"); //Send string back to client 
+    Udp.endPacket(); //Packet has been sent
+   }
+    if (datReq =="Blue") { //See if Red was requested
+    Serial.println("I GOT AZUL");
+    Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());  //Initialize Packet send
+    Udp.print("You are Asking for Blue"); //Send string back to client 
+    Udp.endPacket(); //Packet has been sent
+    }
+  }
+  memset(packetBuffer, 0, UDP_TX_PACKET_MAX_SIZE);
+ 
+}
