@@ -1,5 +1,5 @@
 * Spacecraft Lighting Network System TOPIC# - TDC-46-F17 
-** Background:  
+* Background:  
    Currently, spacecraft lighting system are operated independently through switches and knobs. 
    For future deep space missions, spacecrafts will require new and innovative intelligent 
    light control methods to minimize power, improve reliability such as compensating for degrading 
@@ -9,7 +9,7 @@
    lighting spectrum for task activities and maintaining circadian rhythmsof the crew.
    
    
-** Project Description:
+* Project Description:
    Currently, commercial lighting bus standard chipsets are not suitable for the deep space radiation 
    environment. The focus of this project is to implement the DMX512 lighting standard using programmable 
    computer devices such as microcontrollers or field programmable gate arrays. 
