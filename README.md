@@ -1,5 +1,4 @@
-# UNT-SLNS
-UNT TSGC SLNS
+<b> SPACECRAFT LIGHTING NETWORK SYSTEM </B>
 BACKGROUND
 Currently, spacecraft lighting system are operated independently through switches and knobs. For future deep
 space missions, spacecrafts will require new and innovative intelligent light control methods to minimize power,
